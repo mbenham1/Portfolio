@@ -1,5 +1,5 @@
-h1 {
-    color: white;
+h4 {
+    color: lightgray;
 }
 
 body{
@@ -49,4 +49,61 @@ p, h1, h4{
 
 #carousel {
     display: block;
+}
+
+#logo {
+    background-color: black; 
+    padding: 5px; 
+    border-radius: 8px; 
+    font-family: 'Lobster', cursive;
+}
+
+#headshot {
+    padding: 10px; 
+    display: block; 
+    margin: 0 auto; 
+    border-radius: 50%;
+}
+
+#jumbotron {
+    max-width: 80%; 
+    opacity: .9; 
+    margin: 0 auto;
+}
+
+.social {
+    color: lightgray;
+}
+
+.form {
+    opacity: .9;
+}
+
+.carousel-item {
+    margin: 0 auto;
+}
+
+#test {
+    overflow:auto; 
+    height:400px;
+    text-align: center;
+}
+
+#resume {
+    border-radius: 8px;
+}
+
+.portfolio {
+    margin: 0 auto; 
+    text-align: center;
+}
+
+.projects {
+    border-radius: 8px; 
+    height: 85%; 
+    width: 300px;
+}
+
+#footer {
+    color: lightgray;
 }
