@@ -3,7 +3,8 @@ h4 {
 }
 
 body{
-background: url("../img/images/canyons.jpeg");
+/* background: url("../img/images/canyons.jpeg"); */
+background: url("https://www.jncreative.com/wp-content/uploads/2013/09/jn-creative-portfolio-background-1.jpg");
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: cover;
@@ -47,13 +48,17 @@ p, h1, h4{
     /* color: white; */
 }
 
+#heading {
+    color: white;
+}
+
 #carousel {
     display: block;
 }
 
 #logo {
     background-color: black; 
-    padding: 5px; 
+    padding: 15px; 
     border-radius: 8px; 
     font-family: 'Lobster', cursive;
     margin-left: 5px;
@@ -100,9 +105,16 @@ p, h1, h4{
 .projects {
     border-radius: 8px; 
     height: 200px; 
-    width: 65%;
+    width: 100%;
 }
 
 #footer, .social {
-    color: white;
+    color: lightgray;
+}
+
+.works {
+    opacity: .9;
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 10px;
 }

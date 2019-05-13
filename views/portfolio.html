@@ -28,11 +28,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <!-- <li class="nav-item active">
-                        <a class="nav-link" href="#">Home
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="#resumee">Resume</a>
                     </li>
@@ -56,7 +51,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/mbenham1">
+                        <a class="nav-link" href="https://github.com/mbenham1?tab=stars">
                             <i class="fab fa-lg fa-github"> </i>
                         </a>
                     </li>
@@ -71,8 +66,8 @@
         <div class="jumbotron" id="jumbotron">
             <h1>Welcome!</h1>
             <p>
-                Thank you for visiting my professional website. I am a golf-obsessed full stack coding student at
-                Columbia University, eager to continue in my education and professional ambitions. I've included my
+                Thank you for visiting my professional website. I am a golf-centric full stack coding student at
+                Columbia University, eager to continue in my personal and professional ambitions. I've included my
                 resume, a sampling of some of the projects I've been involved with, as well as a bit about
                 my interests and influences. As we all are, this is a work in progress, and I will be updating
                 as my competencies grow and wherever else appropriate. Feel free to contact me via the form or through
@@ -80,8 +75,8 @@
                 I'd love to hear from you.
             </p>
             <h4>Technologies</h4>
-            <p>HTML, CSS, Bootstrap, JavaScript, jQuery, Node.js, SQL, Sequelize, Handlebars, Express, MongoDB, Heroku,
-                REST API</p>
+            <p>HTML, CSS, Bootstrap, JavaScript, jQuery, Node.js, SQL, Sequelize, Handlebars, Express, MongoDB, Mongoose, Heroku,
+                REST API, Java, React</p>
         </div>
     </section>
 
@@ -91,7 +86,7 @@
 
     <div class="container empty"></div>
 
-    <h1>Resume</h1>
+    <h1 id="heading">Resume</h1>
 
     <div id="test">
         <a href="assets/images/resume.png"><img src="../assets/img/images/resume.png" id="resume"></a>
@@ -107,83 +102,155 @@
     <a name="portfolio"></a>
 
     <div class="container empty"></div>
-    <h1>Portfolio</h1>
-    <!-- <div class="card"> -->
-    <div class="container portfolio" style="margin-bottom: 20px">
+    <h1 id="heading">Portfolio</h1>
+    <div class="container portfolio" style="margin-bottom: 10px">
         <div class="row">
             <div class="col-sm-12 col-md-6">
-                <a href="https://blooming-savannah-78512.herokuapp.com/"><img src="../assets/img/images/burger.png"
-                        class="projects"></a>
-                <h4>Eat der Burger</h4>
+                <div class="card works">
+                    <div class="card-body">
+                        <a href="https://blooming-savannah-78512.herokuapp.com/"><img
+                                src="../assets/img/images/burger.png" class="projects"></a>
+                    </div>
+                    <div class="card-footer">
+                        <h4>Eat der Burger</h4>
+                    </div>
+                </div>
+                <!-- <a href="https://blooming-savannah-78512.herokuapp.com/"><img src="../assets/img/images/burger.png"
+                        class="projects"></a> -->
+                <!-- <h4>Eat der Burger</h4> -->
             </div>
             <div class="col-sm-12 col-md-6">
-                <a href="https://aqueous-chamber-24679.herokuapp.com/"><img src="../assets/img/images/friendfinder.png"
+                <div class="card works">
+                    <div class="card-body">
+                        <a href="https://aqueous-chamber-24679.herokuapp.com/"><img
+                                src="../assets/img/images/friendfinder.png" class="projects"></a>
+                    </div>
+                    <div class="card-footer">
+                        <h4>Friend Finder</h4>
+                    </div>
+                </div>
+                <!-- <a href="https://aqueous-chamber-24679.herokuapp.com/"><img src="../assets/img/images/friendfinder.png"
                         class="projects"></a>
-                <h4>Friend Finder</h4>
+                <h4>Friend Finder</h4> -->
             </div>
         </div>
     </div>
-    <div class="container portfolio" style="margin-bottom: 20px">
+    <div class="container portfolio" style="margin-bottom: 10px">
         <div class="row">
             <div class="col-sm-12 col-md-6">
-                <a href="https://github.com/mbenham1/Bamazon"><img src="../assets/img/images/bamazon.png"
-                        class="projects"></a>
-                <h4>Bamazon CLI</h4>
+                <div class="card works">
+                    <div class="card-body">
+                        <a href="https://github.com/mbenham1/Bamazon"><img src="../assets/img/images/bamazon.png"
+                                class="projects"></a>
+                    </div>
+                    <div class="card-footer">
+                        <h4>Bamazon CLI</h4>
+                    </div>
+                </div>
+                <!-- <a href="https://github.com/mbenham1/Bamazon"><img src="../assets/img/images/bamazon.png"
+                        class="projects"></a> -->
+                <!-- <h4>Bamazon CLI</h4> -->
             </div>
             <div class="col-sm-12 col-md-6">
-                <a href="https://github.com/mbenham1/liri-node-app"><img src="../assets/img/images/liri-js.png"
-                        class="projects"></a>
-                <h4>Liri CLI</h4>
+                <div class="card works">
+                    <div class="card-body">
+                        <a href="https://github.com/mbenham1/liri-node-app"><img src="../assets/img/images/liri-js.png"
+                                class="projects"></a>
+                    </div>
+                    <div class="card-footer">
+                        <h4>Liri CLI</h4>
+                    </div>
+                </div>
+                <!-- <a href="https://github.com/mbenham1/liri-node-app"><img src="../assets/img/images/liri-js.png"
+                        class="projects"></a> -->
+                <!-- <h4>Liri CLI</h4> -->
             </div>
         </div>
     </div>
     <div class="container portfolio">
-        <div class="row" style="margin-bottom: 20px">
+        <div class="row" style="margin-bottom: 10px">
             <div class="col-sm-12 col-md-6">
-                <a href="https://github.com/mbenham1/Giftastic"><img src="../assets/img/images/giftastic.png"
-                        class="projects"></a>
-                <h4>Giftastic</h4>
+                <div class="card works">
+                    <div class="card-body">
+                        <a href="https://github.com/mbenham1/Giftastic"><img src="../assets/img/images/giftastic.png"
+                                class="projects"></a>
+                    </div>
+                    <div class="card-footer">
+                        <h4>Giftastic</h4>
+                    </div>
+                </div>
+                <!-- <a href="https://github.com/mbenham1/Giftastic"><img src="../assets/img/images/giftastic.png"
+                        class="projects"></a> -->
+                <!-- <h4>Giftastic</h4> -->
             </div>
             <div class="col-sm-12 col-md-6">
-                <a href="https://github.com/mbenham1/TriviaGame"><img src="../assets/img/images/masters.png"
-                        class="projects"></a>
-                <h4>Masters Tournament Trivia</h4>
+                <div class="card works">
+                    <div class="card-body">
+                        <a href="https://github.com/mbenham1/TriviaGame"><img src="../assets/img/images/masters.png"
+                                class="projects"></a>
+                    </div>
+                    <div class="card-footer">
+                        <h4>Masters Trivia</h4>
+                    </div>
+                </div>
+                <!-- <a href="https://github.com/mbenham1/TriviaGame"><img src="../assets/img/images/masters.png"
+                        class="projects"></a> -->
+                <!-- <h4>Masters Tournament Trivia</h4> -->
             </div>
-            <!-- <div class="col-sm-12 col-md-6">
-                <a href="https://github.com/mbenham1/unit-4-game"><img src="../assets/img/images/crystals.png"
-                        class="projects"></a>
-                <h4>Crystal Collector Game</h4>
-            </div> -->
         </div>
     </div>
     <div class="container portfolio">
-        <div class="row" style="margin-bottom: 20px">
+        <div class="row" style="margin-bottom: 10px">
             <div class="col-md-3"></div>
             <div class="col-sm-12 col-md-6">
-                <a href="https://github.com/mbenham1/unit-4-game"><img src="../assets/img/images/crystals.png"
+                <div class="card works">
+                    <div class="card-body">
+                        <a href="https://github.com/mbenham1/unit-4-game"><img src="../assets/img/images/crystals.png"
+                                class="projects"></a>
+                    </div>
+                    <div class="card-footer">
+                        <h4>Crystal Collector Game</h4>
+                    </div>
+                </div>
+                <!-- <a href="https://github.com/mbenham1/unit-4-game"><img src="../assets/img/images/crystals.png"
                         class="projects"></a>
-                <h4>Crystal Collector Game</h4>
+                <h4>Crystal Collector Game</h4> -->
             </div>
             <div class="col-md-3"></div>
         </div>
     </div>
-    <!-- <div class="container empty-small"></div> -->
     <div class="container portfolio">
         <div class="row">
             <div class="col-sm-12 col-md-6">
-                <a href="https://boiling-chamber-99669.herokuapp.com/"><img src="../assets/img/images/gigtrace.png"
+                <div class="card works">
+                    <div class="card-body">
+                        <a href="https://boiling-chamber-99669.herokuapp.com/"><img
+                                src="../assets/img/images/gigtrace.png" class="projects"></a>
+                    </div>
+                    <div class="card-footer">
+                        <h4>GigTrace</h4>
+                    </div>
+                </div>
+                <!-- <a href="https://boiling-chamber-99669.herokuapp.com/"><img src="../assets/img/images/gigtrace.png"
                         class="projects"></a>
-                <h4>GigTrace</h4>
+                <h4>GigTrace</h4> -->
             </div>
             <div class="col-sm-12 col-md-6">
-                <a href="https://github.com/kamalnyc17/Columbia-Project01"><img src="../assets/img/images/sayso.png"
+                <div class="card works">
+                    <div class="card-body">
+                        <a href="https://github.com/kamalnyc17/Columbia-Project01"><img
+                                src="../assets/img/images/sayso.png" class="projects"></a>
+                    </div>
+                    <div class="card-footer">
+                        <h4>Say So Media</h4>
+                    </div>
+                </div>
+                <!-- <a href="https://github.com/kamalnyc17/Columbia-Project01"><img src="../assets/img/images/sayso.png"
                         class="projects"></a>
-                <h4>Say So Media</h4>
+                <h4>Say So Media</h4> -->
             </div>
         </div>
     </div>
-    <!-- </div> -->
-
 
     <div class="container empty"></div>
 
@@ -191,7 +258,7 @@
 
     <div class="container empty"></div>
 
-    <h1>Influences</h1>
+    <h1 id="heading">Influences</h1>
 
     <div class="container">
         <div id="demo" class="carousel slide" data-ride="carousel">
@@ -257,7 +324,7 @@
 
     <div class="container empty"></div>
 
-    <h1>Contact</h1>
+    <h1 id="heading">Contact</h1>
 
     <div class="container form">
         <div class="row">
@@ -266,7 +333,6 @@
                     <div class="card-header">Contact Form</div>
                     <div class="card-body">
 
-                        <!-- data entry form -->
                         <form autocomplete="off">
                             <div class="form-group">
                                 <label for="userName-input" class="bold-font">Full Name:</label>
@@ -278,11 +344,6 @@
                                 <input class="form-control" id="email" placeholder="" type="text">
                                 <p class="error-msg" id="userEmail-input-error"></p>
                             </div>
-                            <!-- <div class="form-group">
-                                <label for="userSub-input" class="bold-font">Subject:</label>
-                                <input class="form-control" id="userSub" placeholder="" type="text">
-                                <p class="error-msg" id="userSub-input-error"></p>
-                            </div> -->
                             <div class="form-group">
                                 <label for="userComm-input" class="bold-font">Message:</label>
                                 <textarea class="form-control" rows="5" placeholder="" id="message"></textarea>
@@ -316,55 +377,51 @@
                     <span id="recent"></span>
                 </form>
             </div>
-            <!-- <div class="card most-recent"> -->
-                <!-- <div class="card recent"> -->
-                    <p id="hide">Most Recent Palindromes: <span id="most-recent"></span></p>
-                    <!-- <span id="most-recent"></span> -->
-                <!-- </div> -->
-            <!-- </div> -->
+            <p id="hide">Most Recent Palindromes: <span id="most-recent"></span></p>
         </div>
+    </div>
 
-        <div class="container empty"></div>
+    <div class="container empty"></div>
 
-        <div class="container empty"></div>
+    <div class="container empty"></div>
 
-        <div class="container social">
+    <div class="container social">
 
-            <!-- Social buttons -->
-            <ul class="list-unstyled list-inline text-center">
-                <li class="list-inline-item">
-                    <a class="btn-floating btn-gplus mx-1" style="color: inherit" href="/businesscard">
-                        <i class="fas fa-lg fa-folder"> </i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="btn-floating btn-li mx-1" style="color: inherit">
-                        <i class="fab fa-lg fa-linkedin-in"> </i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="btn-floating btn-dribbble mx-1" style="color: inherit" href="https://github.com/mbenham1">
-                        <i class="fab fa-lg fa-github"> </i>
-                    </a>
-                </li>
-            </ul>
-            <!-- Social buttons -->
-        </div>
+        <!-- Social buttons -->
+        <ul class="list-unstyled list-inline text-center">
+            <li class="list-inline-item">
+                <a class="btn-floating btn-gplus mx-1" style="color: inherit" href="/businesscard">
+                    <i class="fas fa-lg fa-folder"> </i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="btn-floating btn-li mx-1" style="color: inherit">
+                    <i class="fab fa-lg fa-linkedin-in"> </i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="btn-floating btn-dribbble mx-1" style="color: inherit" href="https://github.com/mbenham1?tab=stars">
+                    <i class="fab fa-lg fa-github"> </i>
+                </a>
+            </li>
+        </ul>
+        <!-- Social buttons -->
+    </div>
 
-        <p id="footer">Copyright &copy 2019 | Michael Andrew Benham | <a href="mailto:michaelbenham89@gmail.com"
-                style="color: inherit; text-decoration: none">michaelbenham89@gmail.com</a></p>
-                <script src="https://code.jquery.com/jquery.js"></script>
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> -->
-        <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    <p id="footer">Michael Andrew Benham | Copyright &copy 2019 | <a href="mailto:michaelbenham89@gmail.com"
+            style="color: inherit; text-decoration: none">michaelbenham89@gmail.com</a></p>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script> -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-            crossorigin="anonymous"></script>
-        <script type="text/javascript" src="../assets/js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../assets/js/app.js"></script>
 </body>
 
 </html>
