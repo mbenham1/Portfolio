@@ -4,6 +4,7 @@ $(document).ready(function () {
     var email = $("#email");
     var message = $("#message")
     getPalindromes();
+    // $("#hide").hide();
 
     $("#submit-form").on("click", function (event) {
 
@@ -67,7 +68,9 @@ $(document).ready(function () {
             };
 
             $.post("/api/palindromes", newPalindrome, function (data) {
-
+                // console.log(data);
+                // $("#longest").text(data).css({color: "navy"});
+                // $("#hide").show();
             })
 
             // newestPalindrome();
@@ -86,6 +89,10 @@ $(document).ready(function () {
 
     function getPalindromes() {
 
+        $.get("/api/top", function(top) {
+            $("#longest").text(top).css({color: "navy"})
+        })
+
         $.get("/api/palindromes", function (data) {
             $("#most-recent").empty();
 
@@ -99,6 +106,18 @@ $(document).ready(function () {
 
         })
     }
+
+    // function clearPalindromes(event) {
+
+    //     event.preventDefault();
+    //     $.ajax({ url: "/api/clear", method: "POST" }).then(function() {
+    //       $("#confirm").empty();
+    //       $("#most-recent").empty();
+    //       $("#longest").empty();
+    //     });
+    //   }
+    
+    //   $("#clear").on("click", clearPalindromes);
 
 })
 
