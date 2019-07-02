@@ -46,17 +46,18 @@ module.exports = function(app) {
     // var longest = sorted[0];
     let unique = [...new Set(sorted[0].slice(''))];
     // console.log(unique);
-    if (unique.length > 2) {
+    if (unique.length > 3) {
       var longest = sorted[0];
       top.push(longest);
       // res.send(longest);
+    } else {
       res.json(longest);
     }
     // console.log(sorted[0]);
     // const longest = palindromes.sort(function (a, b) { return b.length - a.length })[0];
     // console.log(longest);
 
-    // res.send(longest);
+    // res.json(longest);
     // res.end();
 
   })

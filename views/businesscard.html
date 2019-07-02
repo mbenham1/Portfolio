@@ -11,18 +11,38 @@
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet">
+    <style>
+        body {
+            transform: scale(.9);
+        }
+        
+        @media only screen and (max-width: 768px) {
+        body {
+          transform: scale(.5) rotate(90deg);
+        }
+        /* #main {
+            height: 60vh !important;
+        } */
+        #all {
+            margin: 0 auto;
+            text-align: center;
+            /* width: 80vw !important; */
+        }
+      }
+      </style>
 </head>
 
 <body style="background: url(../assets/img/images/background.jpg); font-family: 'Oswald', sans-serif" >
 
-    <div class="flex-container d-flex justify-content-around" style="padding-top: 20px">
+<div id="all" class="flex-container">
+    <div id="top" class="flex-container d-flex justify-content-around" style="padding-top: 15px">
         <p>&lt t: 704.942.0077 /&gt</p>
         <p>&lt NYC && CLT /&gt</p>
     </div>
 
-    <div class="flex-container d-flex align-items-center justify-content-center" style="height: 80vh; width: 100%">
+    <div id="main" class="flex-container d-flex align-items-center justify-content-center" style="height: 80vh; width: 100%">
         <a href="/portfolio" style="text-decoration: none; color: inherit; font-size: 70px; font-family: 'Roboto', sans-serif">{michael BENHAM}/</a>
-        <p style="color: red">FULL STACK ENGINEER</p>
+        <p style="color: red">FULL STACK DEVELOPER</p>
     </div>
 
     <div class="flex-container d-flex justify-content-around">
@@ -46,9 +66,18 @@
     </div>
 
     <div class="flex-container d-flex justify-content-around">
-        <p>.email : <a href="mailto:michaelbenham89@gmail.com" style="color: inherit; text-decoration: none">"michaelbenham89@gmail.com",</a></p>
+        <p>.email : <a href="mailto:michaelbenham89@gmail.com" style="color: inherit; text-decoration: none">"michaelbenham89@gmail.com"</a></p>
     </div>
+    <div id="test"></div>
+</div>
 
 </body>
+
+<script type="text/javascript">
+
+    var everything = document.documentElement.innerHTML;
+    // console.log(everything);
+    
+</script>
 
 </html>

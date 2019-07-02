@@ -4,7 +4,7 @@ $(document).ready(function () {
     var email = $("#email");
     var message = $("#message")
     getPalindromes();
-    // $("#hide").hide();
+    $("#bad-palindrome").hide();
 
     $("#submit-form").on("click", function (event) {
 
@@ -33,8 +33,10 @@ $(document).ready(function () {
     function submitFriend(friend) {
 
         $.post("/api/friends", friend, function () {
+            const first = friend.name.split(" ");
+            const firstName = first[0];
 
-            $("#response").text("Thanks, " + friend.name).css({ color: "green" });
+            $("#response").text("Thanks, " + firstName).css({ color: "green" });
             $("#name").val("");
             $("#email").val("");
             $("#message").val("");
@@ -54,6 +56,7 @@ $(document).ready(function () {
     })
 
     function palindrome(string) {
+        
 
         var date = new Date();
         date = moment(date).format("MMMM Do YYYY, h:mm:ss a");
@@ -67,6 +70,15 @@ $(document).ready(function () {
                 date: date
             };
 
+            // let unique = [...new Set(original.slice(''))];
+
+            // if (unique.length < 2) {
+            //     // $("#bad-palindrome").show();
+            //     $("#bad-palindrome").text("  Albeit, not a very complex one...")
+            // } else {
+            //     $("#bad-palindrome").text(" ");
+            // }
+            
             $.post("/api/palindromes", newPalindrome, function (data) {
                 // console.log(data);
                 // $("#longest").text(data).css({color: "navy"});
@@ -77,6 +89,16 @@ $(document).ready(function () {
             getPalindromes();
         } else {
             $("#confirm").text("NOPE, " + original + " is not a palindrome!").css({ color: "red" });
+            $("#bad-palindrome").hide(" ");
+        }
+
+        let unique = [...new Set(original.slice(''))];
+
+        if (unique.length < 2) {
+            $("#bad-palindrome").show();
+            $("#bad-palindrome").text("  Albeit, not a very complex one...")
+        } else {
+            $("#bad-palindrome").text(" ");
         }
 
     };
@@ -90,7 +112,11 @@ $(document).ready(function () {
     function getPalindromes() {
 
         $.get("/api/top", function(top) {
+            var date = new Date();   
+            date = moment(date).format("MMMM Do YYYY, h:mm:ss a");
+            console.log(date);
             $("#longest").text(top).css({color: "navy"})
+            $("#created-on").text(date).css({color: "navy"})
         })
 
         $.get("/api/palindromes", function (data) {
