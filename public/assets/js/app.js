@@ -50,6 +50,7 @@ $(document).ready(function () {
         var regEx = /[^A-Za-z]/g;
         if (!input || regEx.test(input)) {
             $("#confirm").text("Invalid entry").css({ color: "red" });
+            $("#bad-palindrome").text(" ");
         } else {
             palindrome(input);
         }
@@ -70,14 +71,14 @@ $(document).ready(function () {
                 date: date
             };
 
-            // let unique = [...new Set(original.slice(''))];
+            let unique = [...new Set(original.slice(''))];
 
-            // if (unique.length < 2) {
-            //     // $("#bad-palindrome").show();
-            //     $("#bad-palindrome").text("  Albeit, not a very complex one...")
-            // } else {
-            //     $("#bad-palindrome").text(" ");
-            // }
+            if (unique.length < 2) {
+                $("#bad-palindrome").show();
+                $("#bad-palindrome").text("  (though not a very complex one...)")
+            } else {
+                $("#bad-palindrome").text(" ");
+            }
             
             $.post("/api/palindromes", newPalindrome, function (data) {
                 // console.log(data);
@@ -89,15 +90,6 @@ $(document).ready(function () {
             getPalindromes();
         } else {
             $("#confirm").text("NOPE, " + original + " is not a palindrome!").css({ color: "red" });
-            $("#bad-palindrome").hide(" ");
-        }
-
-        let unique = [...new Set(original.slice(''))];
-
-        if (unique.length < 2) {
-            $("#bad-palindrome").show();
-            $("#bad-palindrome").text("  Albeit, not a very complex one...")
-        } else {
             $("#bad-palindrome").text(" ");
         }
 
