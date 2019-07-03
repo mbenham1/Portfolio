@@ -12,6 +12,16 @@ font-family: 'Open Sans', sans-serif;
 /* color: white; */
 }
 
+@media only screen and (max-width: 768px) {
+    #carousel {
+        width: 90%;
+    }
+
+    .form, .palindrome-check {
+        width: 95%;
+    }
+}
+
 nav {
     opacity: .75;
     position: fixed;
@@ -81,8 +91,6 @@ p, h1, h4{
     margin: 0 auto;
 }
 
-
-
 .form, .palindrome-check {
     opacity: .9;
 }
@@ -108,8 +116,8 @@ p, h1, h4{
 
 .projects {
     border-radius: 8px; 
-    height: 200px; 
-    width: 80%;
+    height: 250px; 
+    width: 90%;
     transform: scale(.8);
 }
 

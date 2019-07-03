@@ -81,7 +81,7 @@ $(document).ready(function () {
             }
             
             $.post("/api/palindromes", newPalindrome, function (data) {
-                // console.log(data);
+                console.log("Sent");
                 // $("#longest").text(data).css({color: "navy"});
                 // $("#hide").show();
             })
@@ -103,12 +103,10 @@ $(document).ready(function () {
 
     function getPalindromes() {
 
-        $.get("/api/top", function(top) {
-            var date = new Date();   
-            date = moment(date).format("MMMM Do YYYY, h:mm:ss a");
-            console.log(date);
-            $("#longest").text(top).css({color: "navy"})
-            $("#created-on").text(date).css({color: "navy"})
+        $.get("/api/top", function(data) {
+            console.log(data);
+            $("#longest").text(data.palindrome).css({color: "navy"})
+            $("#created-on").text(data.date).css({color: "navy"})
         })
 
         $.get("/api/palindromes", function (data) {

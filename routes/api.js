@@ -27,6 +27,7 @@ module.exports = function(app) {
   app.get("/api/top", function (req, res) {
 
     res.json(top[top.length-1]);
+    // res.json(top);
 
   })
 
@@ -43,15 +44,20 @@ module.exports = function(app) {
     palindromes.push(req.body);
     sorted.push(req.body.palindrome);
     sorted = sorted.sort((a, b) => b.length - a.length);
+    res.send("Received")
     // var longest = sorted[0];
     let unique = [...new Set(sorted[0].slice(''))];
     // console.log(unique);
     if (unique.length > 3) {
       var longest = sorted[0];
-      top.push(longest);
+      top.push({
+        palindrome: longest,
+        date: req.body.date
+      });
       // res.send(longest);
+      // console.log(top)
     } else {
-      res.json(longest);
+      // res.json(longest);
     }
     // console.log(sorted[0]);
     // const longest = palindromes.sort(function (a, b) { return b.length - a.length })[0];
