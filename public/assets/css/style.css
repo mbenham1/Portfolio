@@ -16,9 +16,15 @@ font-family: 'Open Sans', sans-serif;
     #carousel {
         width: 90%;
     }
-
     .form, .palindrome-check {
         width: 95%;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    body{
+        background: rgb(45,32,3);
+        background: radial-gradient(circle, rgba(45,32,3,0.9906337535014006) 0%, rgba(1,1,25,1) 35%, rgba(255,169,0,1) 100%);
     }
 }
 
