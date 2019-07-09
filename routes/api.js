@@ -44,27 +44,21 @@ module.exports = function(app) {
     palindromes.push(req.body);
     sorted.push(req.body.palindrome);
     sorted = sorted.sort((a, b) => b.length - a.length);
-    res.send("Received")
-    // var longest = sorted[0];
+    res.send("Received");
     let unique = [...new Set(sorted[0].slice(''))];
-    // console.log(unique);
     if (unique.length > 3) {
       var longest = sorted[0];
+      var index = palindromes.map(function(i) { return i.palindrome; }).indexOf(longest);
+      console.log(index);
       top.push({
         palindrome: longest,
-        date: req.body.date
+        date: palindromes[index].date
       });
       // res.send(longest);
       // console.log(top)
     } else {
       // res.json(longest);
     }
-    // console.log(sorted[0]);
-    // const longest = palindromes.sort(function (a, b) { return b.length - a.length })[0];
-    // console.log(longest);
-
-    // res.json(longest);
-    // res.end();
 
   })
 
