@@ -62,12 +62,13 @@ module.exports = function(app) {
 
   })
 
-  // app.post("/api/clear", function(req, res) {
+  app.get("/api/c1eara11", function(req, res) {
 
-  //   palindromes.length = 0;
-  //   top.length = 0;
+    palindromes = [];
+    top = [];
 
-  //   res.json({ ok: true });
-  // });
+    res.json({ ok: true });
+
+  });
 
 }

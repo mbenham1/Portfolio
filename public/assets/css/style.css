@@ -129,10 +129,15 @@ p, h1, h4{
     height: 250px; 
     width: 90%;
     transform: scale(.8);
+    /* box-shadow: 0 3px 6px #999, 0 3px 6px #999; */
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
 }
 
 .projects:hover{
+    -webkit-transform: scale(.99);
     transform: scale(.99);
+    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
 }
 
 #footer, .social {
