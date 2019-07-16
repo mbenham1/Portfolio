@@ -21,7 +21,7 @@ font-family: 'Open Sans', sans-serif;
     }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 740px) {
     body{
         background: rgb(13,13,12);
         background: linear-gradient(90deg, rgba(13,13,12,0.9906337535014006) 0%, rgba(39,39,40,1) 40%, rgba(166,165,163,1) 100%);
