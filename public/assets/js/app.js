@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    $(".test").hide();
 
     var name = $("#name");
     var email = $("#email");
@@ -120,6 +121,35 @@ $(document).ready(function () {
                 }
             }
 
+        })
+    }
+
+    $(".carousel-influence").on("click", function(event) {
+        const whom = $(this).attr("data-id");
+        console.log(whom);
+        wikipediaPreview(whom);
+    })
+
+    function wikipediaPreview(influence) {
+        const queryUrl = `https://en.wikipedia.org/w/api.php?action=opensearch&search=${influence}&limit=3&format=json&origin=*`
+        $.ajax({
+            url: queryUrl,
+            method: "GET"
+        }).then(function (response) {
+            $(".test").show("slow");
+            const responseTitle = response[1][0];
+            const responseText = response[2][0];
+            const responseLink = response[3][0];
+            $("#link").attr("href", responseLink);
+            $("#wiki-name").text(responseTitle);
+            $("#wiki-text").text(responseText);
+            $("#wiki-link").text(responseLink);
+            // console.log(response[1][0]);
+            // console.log(response[2][0]);
+            // console.log(response[3][0]);
+            $("body").on("click", function(event){
+                $(".test").hide("slow");
+            })
         })
     }
 

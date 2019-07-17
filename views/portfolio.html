@@ -20,7 +20,7 @@
         <div class="container">
             <a class="navbar-brand" href="#top">
                 <logo id="logo">
-                    M i c h a e l B e n h a m
+                    {michael BENHAM}
                 </logo>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
@@ -61,12 +61,12 @@
         </div>
     </nav>
 
-    <section id="main">
+    <section id="main" style="background: whitesmoke; height: 100vh">
        <img src="../assets/img/images/Michael-headshot.png" id="headshot">
         <div class="jumbotron" id="jumbotron">
             <h1>Welcome!</h1>
             <p>
-                Thank you for visiting my professional website. I am a junior-level developer based in New York, 
+                Thank you for visiting my website. I am a junior-level developer based in New York, 
                 eager to continue in my personal and professional ambitions. I've included my
                 resume, a sampling of some of the projects with which I've been involved, as well as a bit about
                 my interests and influences. As we all are, this is a work in progress, and I will be updating
@@ -74,7 +74,7 @@
                 the socials link, I'd love to hear from you.
             </p>
             <h4>Technologies</h4>
-            <p>HTML, CSS, Bootstrap, JavaScript, jQuery, Node, MySQL, Sequelize, Handlebars, Express, MongoDB,
+            <p>HTML, CSS, Bootstrap, JavaScript, jQuery, Node, Express, MySQL, Sequelize, Handlebars, MongoDB,
                 Mongoose, Heroku, REST API, React</p>
         </div>
     </section>
@@ -221,58 +221,66 @@
 
             <div class="carousel-inner" style="margin: 0 auto">
                 <div class="carousel-item active">
-                    <img src="../assets/img/images/kierkegaard.jpg" alt="kierkegaard" id="carousel"
-                        style="margin: 0 auto" width="50%" height="400">
+                    <img src="../assets/img/images/kierkegaard.jpg" alt="kierkegaard" id="carousel" class="carousel-influence"
+                        data-id="Søren Kierkegaard" style="margin: 0 auto" width="50%" height="400">
                     <div class="carousel-caption">
                         <h3>Soren Kierkegaard</h3>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="../assets/img/images/mcilroy-resize.png" id="carousel" style="margin: 0 auto"
-                        alt="mcilroy" width="75%" height="400">
+                    <img src="../assets/img/images/mcilroy-resize.png" id="carousel" class="carousel-influence" style="margin: 0 auto"
+                        data-id="Rory McIlroy" alt="mcilroy" width="75%" height="400">
                     <div class="carousel-caption">
                         <h3>Rory McIlroy</h3>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="../assets/img/images/the_1975.jpg" alt="1975" id="carousel" style="margin: 0 auto"
-                        width="85%" height="400">
+                    <img src="../assets/img/images/the_1975.jpg" alt="1975" id="carousel" class="carousel-influence" style="margin: 0 auto"
+                        data-id="The 1975" width="85%" height="400">
                     <div class="carousel-caption">
                         <h3>The 1975</h3>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="../assets/img/images/chesterton.jpeg" alt="chesterton" id="carousel"
-                        style="margin: 0 auto" width="65%" height="400">
+                    <img src="../assets/img/images/chesterton.jpeg" alt="chesterton" id="carousel" class="carousel-influence"
+                        data-id="G._K._Chesterton" style="margin: 0 auto" width="65%" height="400">
                     <div class="carousel-caption">
                         <h3>G.K. Chesterton</h3>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="../assets/img/images/boethius.jpg" alt="boethius" id="carousel" style="margin: 0 auto"
-                        width="50%" height="400">
+                    <img src="../assets/img/images/boethius.jpg" alt="boethius" id="carousel" class="carousel-influence" style="margin: 0 auto"
+                        data-id="Boethius" width="50%" height="400">
                     <div class="carousel-caption">
                         <h3>Boethius- The Consolation of Philosophy</h3>
                     </div>
                 </div>
                 <div class="carousel-item">
-                        <img src="../assets/img/images/golden-ratio.gif" alt="golden" id="carousel" style="margin: 0 auto"
-                            width="50%" height="400">
+                        <img src="../assets/img/images/golden-ratio.gif" alt="golden" id="carousel" class="carousel-influence" style="margin: 0 auto"
+                            data-id="Golden Ratio" width="50%" height="400">
                         <div class="carousel-caption">
                             <h3>Golden Ratio</h3>
                         </div>
                     </div>
             </div>
 
-            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <a class="carousel-control-prev" href="#carousel-influences" data-slide="prev">
                 <span class="carousel-control-prev-icon"></span>
             </a>
-            <a class="carousel-control-next" href="#demo" data-slide="next">
+            <a class="carousel-control-next" href="#carousel-influences" data-slide="next">
                 <span class="carousel-control-next-icon"></span>
             </a>
 
         </div>
     </div>
+    <div class="container">
+        <div class="card test" style="margin-top: 15px">
+            <h3 style="text-align: center"><span id="wiki-name"></span></h3>
+            <p><span id="wiki-text"></span></p>
+            <p><a id="link"><span id="wiki-link"></span></a></p>
+        </div>
+    </div>
+
     <div class="container empty"></div>
 
     <a name="contact"></a>
