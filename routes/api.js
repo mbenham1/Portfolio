@@ -1,4 +1,6 @@
 var db = require("../models");
+var checkWord = require('check-word');
+words = checkWord('en');
 
 module.exports = function(app) {
 
@@ -41,19 +43,22 @@ module.exports = function(app) {
 
   app.post("/api/palindromes", function(req, res) {
 
+    console.log(words.check(req.body.palindrome));
     palindromes.push(req.body);
     sorted.push(req.body.palindrome);
     sorted = sorted.sort((a, b) => b.length - a.length);
     res.send("Received");
     let unique = [...new Set(sorted[0].slice(''))];
-    if (unique.length > 3) {
+    if (unique.length > 2) {
       var longest = sorted[0];
       var index = palindromes.map(function(i) { return i.palindrome; }).indexOf(longest);
       console.log(index);
+      if (words.check(longest) === true) {
       top.push({
         palindrome: longest,
         date: palindromes[index].date
       });
+    }
       // res.send(longest);
       // console.log(top)
     } else {

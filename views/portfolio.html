@@ -61,8 +61,18 @@
         </div>
     </nav>
 
+    <div id="new-main" class="flex-container d-flex align-items-center justify-content-center" style="top: 0px; left: 0px; background: whitesmoke; height: calc(100vh - 56px); width: 100%">
+        <img src="../assets/img/images/Michael-headshot.png" id="headshot">
+    </div>
+
+    <div class="triangle"></div>
+
+    <div class="container empty"></div>
+
+    <div class="container empty"></div>
+
     <section id="main">
-       <img src="../assets/img/images/Michael-headshot.png" id="headshot">
+       <!-- <img src="../assets/img/images/Michael-headshot.png" id="headshot"> -->
         <div class="jumbotron" id="jumbotron">
             <h1>Welcome!</h1>
             <p>
@@ -329,11 +339,11 @@
     <div class="container palindrome-check" style="width: 75%">
 
         <div class="card">
-            <div class="card-header">Palindrome?</div>
+            <div class="card-header">Palindrome Word Checker</div>
             <div class="card-body">
                 <form>
                     <div class="form-group">
-                        <input type="text" id="original" class="form-control" autocomplete="off">
+                        <input type="text" id="original" class="form-control" autocomplete="off" maxlength="50">
                     </div>
                     <button id="check" type="submit" class="btn btn-primary">Check</button>
                     <!-- <button id="clear" type="submit" class="btn btn-danger">Clear</button>         -->

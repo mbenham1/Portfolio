@@ -16,7 +16,7 @@ font-family: 'Open Sans', sans-serif;
     #carousel {
         width: 90%;
     }
-    .form{
+    .form {
         width: 95%;
     }
 
@@ -52,6 +52,15 @@ nav {
     border-radius: 8px;
 } */
 
+.triangle {
+    margin: 0 auto;
+    text-align: center;
+    width: 100px;
+    height: 56px;
+    background-color:whitesmoke;
+    clip-path: polygon(0% 0, 50% 100%, 100% 0%);
+  }
+
 p, h1, h4{
     text-align: center;
     /* color: white; */
@@ -65,8 +74,13 @@ p, h1, h4{
     display: block;
 }
 
-#logo {
-    background-color: black; 
+#logo{
+    background: black; 
+    color: radial-gradient(
+        circle farthest-corner at center center,
+        white,
+        #111
+      ) no-repeat;
     padding-left: 25px;
     padding-right: 25px;
     padding-top: 15px;
@@ -77,7 +91,7 @@ p, h1, h4{
 }
 
 #headshot {
-    padding: 10px; 
+    /* padding: 10px;  */
     display: block; 
     margin: 0 auto; 
     border-radius: 50%;

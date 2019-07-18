@@ -65,10 +65,10 @@ $(document).ready(function () {
         var original = string.toLowerCase();
         var reverse = original.split('').reverse().join('');
         if (reverse === original) {
-            $("#confirm").text("YES, " + original + " is a palindrome!").css({ color: "green" });
+            $("#confirm").text("YES, " + string + " is a palindrome!").css({ color: "green" });
 
             var newPalindrome = {
-                palindrome: original,
+                palindrome: string,
                 date: date
             };
 
