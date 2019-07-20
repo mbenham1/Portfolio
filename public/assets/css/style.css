@@ -151,6 +151,10 @@ p, h1, h4{
     color: lightgray;
 }
 
+#carousel, .projects {
+    object-fit: cover;
+}
+
 /* .works {
     opacity: .9;
     width: 70%;
