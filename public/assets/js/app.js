@@ -1,6 +1,6 @@
 $(document).ready(function () {
-    $(".test").hide();
 
+    $(".test").hide();
     var name = $("#name");
     var email = $("#email");
     var message = $("#message")
