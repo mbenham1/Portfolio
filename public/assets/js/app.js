@@ -83,11 +83,8 @@ $(document).ready(function () {
             
             $.post("/api/palindromes", newPalindrome, function (data) {
                 console.log("Sent");
-                // $("#longest").text(data).css({color: "navy"});
-                // $("#hide").show();
             })
 
-            // newestPalindrome();
             getPalindromes();
         } else {
             $("#confirm").text("NOPE, " + original + " is not a palindrome!").css({ color: "red" });
@@ -105,7 +102,7 @@ $(document).ready(function () {
     function getPalindromes() {
 
         $.get("/api/top", function(data) {
-            console.log(data);
+            // console.log(data);
             $("#longest").text(data.palindrome).css({color: "navy"})
             $("#created-on").text(data.date).css({color: "navy"})
         })
@@ -126,7 +123,7 @@ $(document).ready(function () {
 
     $(".carousel-influence").on("click", function(event) {
         const whom = $(this).attr("data-id");
-        console.log(whom);
+        // console.log(whom);
         wikipediaPreview(whom);
     })
 
@@ -152,18 +149,6 @@ $(document).ready(function () {
             })
         })
     }
-
-    // function clearPalindromes(event) {
-
-    //     event.preventDefault();
-    //     $.ajax({ url: "/api/clear", method: "POST" }).then(function() {
-    //       $("#confirm").empty();
-    //       $("#most-recent").empty();
-    //       $("#longest").empty();
-    //     });
-    //   }
-    
-    //   $("#clear").on("click", clearPalindromes);
 
 })
 

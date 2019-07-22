@@ -43,7 +43,7 @@ module.exports = function(app) {
 
   app.post("/api/palindromes", function(req, res) {
 
-    console.log(words.check(req.body.palindrome));
+    // console.log(words.check(req.body.palindrome));
     palindromes.push(req.body);
     sorted.push(req.body.palindrome);
     sorted = sorted.sort((a, b) => b.length - a.length);
@@ -53,12 +53,12 @@ module.exports = function(app) {
       var longest = sorted[0];
       var index = palindromes.map(function(i) { return i.palindrome; }).indexOf(longest);
       console.log(index);
-      if (words.check(longest) === true) {
+      // if (words.check(longest) === true) {
       top.push({
         palindrome: longest,
         date: palindromes[index].date
       });
-    }
+    // }
       // res.send(longest);
       // console.log(top)
     } else {
