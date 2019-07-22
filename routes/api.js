@@ -49,16 +49,16 @@ module.exports = function(app) {
     sorted = sorted.sort((a, b) => b.length - a.length);
     res.send("Received");
     let unique = [...new Set(sorted[0].slice(''))];
-    if (unique.length > 2) {
+    if (unique.length > 3) {
       var longest = sorted[0];
       var index = palindromes.map(function(i) { return i.palindrome; }).indexOf(longest);
       console.log(index);
-      // if (words.check(longest) === true) {
+      if (longest.split(" ").length > 2) {
       top.push({
         palindrome: longest,
         date: palindromes[index].date
       });
-    // }
+    }
       // res.send(longest);
       // console.log(top)
     } else {

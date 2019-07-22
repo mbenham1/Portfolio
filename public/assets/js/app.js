@@ -48,7 +48,7 @@ $(document).ready(function () {
     $("#check").on("click", function (event) {
         event.preventDefault();
         var input = $("#original").val();
-        var regEx = /[^A-Za-z]/g;
+        var regEx = /[^A-Za-z ]/g;
         if (!input || regEx.test(input)) {
             $("#confirm").text("Invalid entry").css({ color: "red" });
             $("#bad-palindrome").text(" ");
@@ -59,10 +59,9 @@ $(document).ready(function () {
 
     function palindrome(string) {
         
-
         var date = new Date();
         date = moment(date).format("MMMM Do YYYY, h:mm:ss a");
-        var original = string.toLowerCase();
+        var original = string.toLowerCase().replace(/\s/g, '');
         var reverse = original.split('').reverse().join('');
         if (reverse === original) {
             $("#confirm").text("YES, " + string + " is a palindrome!").css({ color: "green" });
