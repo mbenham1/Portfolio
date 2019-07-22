@@ -69,8 +69,9 @@ module.exports = function(app) {
 
   app.get("/api/c1eara11", function(req, res) {
 
-    palindromes = [];
+    palindromes = [{}];
     top = [];
+    sorted = [];
 
     res.json({ ok: true });
 
