@@ -49,6 +49,11 @@ $(document).ready(function () {
         event.preventDefault();
         var input = $("#original").val();
         var regEx = /[^A-Za-z ]/g;
+        if (!input.replace(/\s/g, '').length) {
+            $("#confirm").text('Entry only contains whitespace').css({ color: "black" });
+            $("#bad-palindrome").text("");
+            return
+          }
         if (!input || regEx.test(input)) {
             $("#confirm").text("Invalid entry").css({ color: "red" });
             $("#bad-palindrome").text(" ");
