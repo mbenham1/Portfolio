@@ -171,6 +171,7 @@ p, h1, h4{
 
 #carousel, .projects {
     object-fit: cover;
+    cursor: copy;
 }
 
 /* .works {

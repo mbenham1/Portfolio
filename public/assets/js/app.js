@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    $('body').css('display', 'none');
+    $('body').fadeIn(2000);
+    let clicked = false;
 
     $(".test").hide();
     var name = $("#name");
@@ -132,12 +135,13 @@ $(document).ready(function () {
     })
 
     function wikipediaPreview(influence) {
+        clicked = true;
         const queryUrl = `https://en.wikipedia.org/w/api.php?action=opensearch&search=${influence}&limit=3&format=json&origin=*`
         $.ajax({
             url: queryUrl,
             method: "GET"
         }).then(function (response) {
-            $(".test").show("slow");
+            $(".test").fadeIn(1000);
             const responseTitle = response[1][0];
             const responseText = response[2][0];
             const responseLink = response[3][0];
@@ -149,7 +153,8 @@ $(document).ready(function () {
             // console.log(response[2][0]);
             // console.log(response[3][0]);
             $("body").on("click", function(event){
-                $(".test").hide("slow");
+                $(".test").fadeOut(1000);
+                clicked = false;
             })
         })
     }
