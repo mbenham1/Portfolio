@@ -1,7 +1,30 @@
 $(document).ready(function () {
-    $('body').css('display', 'none');
-    $('body').fadeIn(2000);
+
+    $('a').not('a[id=no-blank]').attr('target','_blank');
+
     let clicked = false;
+
+    new Typed('.message', {
+        strings: ["Welcome^1200", "Bienvenidos^1200", "Wilkommen^1200", "Bienvenue^1200", "欢迎^1200", "Добро пожаловать^1200"],
+        typeSpeed: 50,
+        backSpeed: 10,
+        cursorChar: '|',
+        loop: true
+    });
+
+    // $('.navbar-nav a').on('click', function () {
+    //     $('.navbar-nav').find('li.active').removeClass('active');
+    //     $(this).parent('li').addClass('active');
+    // });
+
+    $(".scrollTo").on("click",function(e){
+        e.preventDefault();
+        var target = $(this).attr('data-target');
+        var pos = $('#'+target).offset().top;
+      
+      $('html, body').animate({ scrollTop: pos }, 200);
+          return false;
+    });
 
     $(".test").hide();
     var name = $("#name");
@@ -56,7 +79,7 @@ $(document).ready(function () {
             $("#confirm").text('Entry only contains whitespace').css({ color: "black" });
             $("#bad-palindrome").text("");
             return
-          }
+        }
         if (!input || regEx.test(input)) {
             $("#confirm").text("Invalid entry").css({ color: "red" });
             $("#bad-palindrome").text(" ");
@@ -66,7 +89,7 @@ $(document).ready(function () {
     })
 
     function palindrome(string) {
-        
+
         var date = new Date();
         date = moment(date).format("MMMM Do YYYY, h:mm:ss a");
         var original = string.toLowerCase().replace(/\s/g, '');
@@ -87,7 +110,7 @@ $(document).ready(function () {
             } else {
                 $("#bad-palindrome").text(" ");
             }
-            
+
             $.post("/api/palindromes", newPalindrome, function (data) {
                 console.log("Sent");
             })
@@ -108,10 +131,10 @@ $(document).ready(function () {
 
     function getPalindromes() {
 
-        $.get("/api/top", function(data) {
+        $.get("/api/top", function (data) {
             // console.log(data);
-            $("#longest").text(data.palindrome).css({color: "navy"})
-            $("#created-on").text(data.date).css({color: "navy"})
+            $("#longest").text(data.palindrome).css({ color: "navy" })
+            $("#created-on").text(data.date).css({ color: "navy" })
         })
 
         $.get("/api/palindromes", function (data) {
@@ -128,7 +151,7 @@ $(document).ready(function () {
         })
     }
 
-    $(".carousel-influence").on("click", function(event) {
+    $(".carousel-influence").on("click", function (event) {
         const whom = $(this).attr("data-id");
         // console.log(whom);
         wikipediaPreview(whom);
@@ -152,7 +175,7 @@ $(document).ready(function () {
             // console.log(response[1][0]);
             // console.log(response[2][0]);
             // console.log(response[3][0]);
-            $("body").on("click", function(event){
+            $("body").on("click", function (event) {
                 $(".test").fadeOut(1000);
                 clicked = false;
             })

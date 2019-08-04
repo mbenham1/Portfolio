@@ -7,14 +7,13 @@ h4 {
     color: lightgray;
 }
 
-body{
+body {
 /* background: url("../img/images/canyons.jpeg"); */
 background: url("https://www.jncreative.com/wp-content/uploads/2013/09/jn-creative-portfolio-background-1.jpg");
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: cover;
 font-family: 'Open Sans', sans-serif;
-/* color: white; */
 }
 
 @media only screen and (max-width: 740px) {
@@ -41,6 +40,7 @@ nav {
     top: 0;
     z-index: 100;
     font-family: 'Open Sans', sans-serif;
+    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
 }
 
 .empty {
@@ -82,11 +82,7 @@ p, h1, h4{
 
 #logo{
     background: black; 
-    color: radial-gradient(
-        circle farthest-corner at center center,
-        white,
-        #111
-      ) no-repeat;
+    color: lightgray;
     padding-left: 25px;
     padding-right: 25px;
     padding-top: 15px;
@@ -159,7 +155,7 @@ p, h1, h4{
     transition: .3s ease-in-out;
 }
 
-.projects:hover{
+.projects:hover {
     -webkit-transform: scale(.99);
     transform: scale(.99);
     box-shadow: 0 3px 6px #999, 0 3px 6px #999;
@@ -171,12 +167,32 @@ p, h1, h4{
 
 #carousel, .projects {
     object-fit: cover;
+}
+
+#carousel {
     cursor: copy;
 }
 
-/* .works {
-    opacity: .9;
-    width: 70%;
-    margin: 0 auto;
-    margin-bottom: 10px;
-} */
+i:hover, #logo:hover, .nav-link:hover {
+    color: gold !important;
+    background-color: black;
+}
+
+.navbar-nav li.active > a {
+    background-color: black;
+}
+
+#new-main {
+    animation-name: intro-loader;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+
+ @keyframes intro-loader {
+     0% {
+         opacity: 0;
+    }
+     50% {
+         opacity: 1;
+    }
+}
