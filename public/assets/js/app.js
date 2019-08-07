@@ -1,8 +1,11 @@
 $(document).ready(function () {
 
-    $('a').not('a[id=no-blank]').attr('target','_blank');
+    let windowHeight = $(window).height();
+    if(windowHeight < 650) { windowHeight = 650; }
 
-    let clicked = false;
+    $(".wrapper").height(windowHeight);
+
+    $('a').not('a[id=no-blank]').attr('target','_blank');
 
     new Typed('.message', {
         strings: ["Welcome^1200", "Bienvenidos^1200", "Wilkommen^1200", "Bienvenue^1200", "欢迎^1200", "Добро пожаловать^1200"],
@@ -24,6 +27,12 @@ $(document).ready(function () {
       
       $('html, body').animate({ scrollTop: pos }, 200);
           return false;
+    });
+
+    $(window).resize(function() {
+        windowHeight = $(window).height();
+        if(windowHeight < 650) { windowHeight = 650; }
+        $(".wrapper").height(windowHeight);
     });
 
     $(".test").hide();
@@ -158,7 +167,6 @@ $(document).ready(function () {
     })
 
     function wikipediaPreview(influence) {
-        clicked = true;
         const queryUrl = `https://en.wikipedia.org/w/api.php?action=opensearch&search=${influence}&limit=3&format=json&origin=*`
         $.ajax({
             url: queryUrl,
@@ -175,9 +183,8 @@ $(document).ready(function () {
             // console.log(response[1][0]);
             // console.log(response[2][0]);
             // console.log(response[3][0]);
-            $("body").on("click", function (event) {
+            $(".test").on("click", function (event) {
                 $(".test").fadeOut(1000);
-                clicked = false;
             })
         })
     }

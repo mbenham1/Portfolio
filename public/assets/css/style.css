@@ -131,8 +131,8 @@ p, h1, h4{
 }
 
 #test {
-    overflow:auto; 
-    height:400px;
+    /* overflow:auto;  */
+    /* height:400px; */
     text-align: center;
 }
 
@@ -170,7 +170,7 @@ p, h1, h4{
 }
 
 #carousel {
-    cursor: copy;
+    cursor: help;
 }
 
 i:hover, #logo:hover, .nav-link:hover {
@@ -188,6 +188,20 @@ i:hover, #logo:hover, .nav-link:hover {
     animation-iteration-count: 1;
 }
 
+.outer {
+    overflow: hidden;
+}
+
+.carousel-influence {
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s ease;
+}
+
+.carousel-influence:hover {
+    transform: scale(1.2);
+}
+
  @keyframes intro-loader {
      0% {
          opacity: 0;
@@ -195,4 +209,25 @@ i:hover, #logo:hover, .nav-link:hover {
      50% {
          opacity: 1;
     }
+}
+
+i {
+    height: 1em;
+}
+
+.wrapper {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    display: inline-block; 
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    /* padding: 40px 0; */
+    background: whitesmoke;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    filter: invert(100%);
 }
