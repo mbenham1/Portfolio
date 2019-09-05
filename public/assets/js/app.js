@@ -3,7 +3,7 @@ $(document).ready(function () {
     let windowHeight = $(window).height();
     if(windowHeight < 650) { windowHeight = 650; }
 
-    $(".wrapper").height(windowHeight);
+    $(".wrapper, .wrapper-1").height(windowHeight);
 
     $('a').not('a[id=no-blank]').attr('target','_blank');
 
@@ -32,7 +32,7 @@ $(document).ready(function () {
     $(window).resize(function() {
         windowHeight = $(window).height();
         if(windowHeight < 650) { windowHeight = 650; }
-        $(".wrapper").height(windowHeight);
+        $(".wrapper, .wrapper-1").height(windowHeight);
     });
 
     $(".test").hide();
@@ -63,8 +63,14 @@ $(document).ready(function () {
         };
 
         submitFriend(newFriend);
+        sendMail(newFriend);
 
     })
+
+    function sendMail(sub) {
+        console.log(sub);
+        window.open(`mailto:michaelbenham89@gmail.com?subject=Hello, Michael!&body=Nice site!%0D%0A%0D%0A${sub.name}`);
+    }
 
     function submitFriend(friend) {
 

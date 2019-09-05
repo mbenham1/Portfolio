@@ -215,6 +215,10 @@ i {
     height: 1em;
 }
 
+.wrapper-1 {
+    height: auto;
+}
+
 .wrapper {
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
