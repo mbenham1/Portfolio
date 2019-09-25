@@ -131,7 +131,7 @@ p, h1, h4{
 }
 
 #test {
-    /* overflow:auto;  */
+    overflow: auto; 
     /* height:400px; */
     text-align: center;
 }
