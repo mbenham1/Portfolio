@@ -17,7 +17,7 @@ background-size: cover;
 font-family: 'Open Sans', sans-serif;
 }
 
-@media only screen and (max-width: 740px) {
+@media only screen and (max-width: 860px) {
     #carousel {
         width: 90%;
     }
@@ -105,6 +105,10 @@ p, h1, h4{
     z-index: -1;
 }
 
+/* .nav-link:hover{
+    border-bottom: 3px solid gold;
+} */
+
 #headshot {
     /* padding: 10px;  */
     display: block; 
@@ -133,8 +137,8 @@ p, h1, h4{
 
 #test {
     overflow: auto; 
-    /* height:400px; */
     text-align: center;
+    -webkit-overflow-scrolling: touch;
 }
 
 #resume-pic {

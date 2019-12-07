@@ -56,7 +56,7 @@ $(document).ready(function () {
     $(window).resize(function() {
         windowHeight = $(window).height();
         if(windowHeight < 650) { windowHeight = 650; }
-        $(".wrapper, .wrapper-1").height(windowHeight);
+        $(".wrapper .wrapper-1").height(windowHeight);
     });
 
     $(".test").hide();
