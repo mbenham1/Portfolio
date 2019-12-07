@@ -175,7 +175,7 @@ p, h1, h4{
 
 i:hover, #logo:hover, .nav-link:hover {
     color: gold !important;
-    background-color: black;
+    /* background-color: black; */
 }
 
 .navbar-nav li.active > a {

@@ -52,7 +52,7 @@ module.exports = function(app) {
     if (unique.length > 3) {
       var longest = sorted[0];
       var index = palindromes.map(function(i) { return i.palindrome; }).indexOf(longest);
-      console.log(index);
+      // console.log(index);
       if (longest.split(" ").length > 2) {
       top.push({
         palindrome: longest,
