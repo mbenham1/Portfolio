@@ -138,6 +138,7 @@ p, h1, h4{
 #test {
     overflow: auto; 
     text-align: center;
+    overflow-y: scroll;
     /* -webkit-overflow-scrolling: touch; */
 }
 
