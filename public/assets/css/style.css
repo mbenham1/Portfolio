@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    transition: .1s ease;
 }
 
 h4 {
@@ -173,15 +174,6 @@ p, h1, h4{
     cursor: help;
 }
 
-i:hover, #logo:hover, .nav-link:hover {
-    color: gold !important;
-    /* background-color: black; */
-}
-
-.navbar-nav li.active > a {
-    background-color: black;
-}
-
 #new-main {
     animation-name: intro-loader;
     animation-duration: 3s;
@@ -235,3 +227,15 @@ i {
 .carousel-control-prev-icon, .carousel-control-next-icon {
     filter: invert(100%);
 }
+
+#remove {
+    color: white;
+    background-color: red;
+    font-size: 20px;
+    transform: scale(1, .5);
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    cursor: pointer;
+  }
+  

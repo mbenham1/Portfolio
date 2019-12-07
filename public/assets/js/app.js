@@ -15,10 +15,10 @@ $(document).ready(function () {
         loop: true
     });
 
-    // $('.navbar-nav a').on('click', function () {
-    //     $('.navbar-nav').find('li.active').removeClass('active');
-    //     $(this).parent('li').addClass('active');
-    // });
+    $('.nav-link').on("click", function () {
+        $('.nav-link').removeClass('active');
+        $(this).addClass('active');
+    });
 
     $(".scrollTo").on("click",function(e){
         e.preventDefault();
@@ -28,6 +28,30 @@ $(document).ready(function () {
       $('html, body').animate({ scrollTop: pos }, 200);
           return false;
     });
+
+    $(window).scroll(function () {
+        onScrollHandle();
+    });
+    
+    function onScrollHandle() {
+        //Get current scroll position
+        var currentScrollPos = $(document).scrollTop() + 2;
+        //Iterate through all node
+        $('#navbarResponsive > ul > li > a.scrollTo').each(function () {
+            var curLink = $(this);
+            var refElem = $(curLink.attr('href'));
+            //Compare the value of current position and the every section position in each scroll
+            if (refElem.position().top <= currentScrollPos && refElem.position().top + refElem.height() > currentScrollPos) {
+                //Remove class active in all nav
+                $('#navbarResponsive > ul > li > a').removeClass("active");
+                //Add class active
+                curLink.parent().addClass("active").css({'border-bottom': '3px solid gold'});
+            }
+            else {
+                curLink.parent().removeClass("active").css({border: 'none'});
+            }
+        });
+    }
 
     $(window).resize(function() {
         windowHeight = $(window).height();
@@ -178,7 +202,7 @@ $(document).ready(function () {
             url: queryUrl,
             method: "GET"
         }).then(function (response) {
-            $(".test").fadeIn(1000);
+            $(".test").fadeIn(0);
             const responseTitle = response[1][0];
             const responseText = response[2][0];
             const responseLink = response[3][0];
@@ -189,9 +213,10 @@ $(document).ready(function () {
             // console.log(response[1][0]);
             // console.log(response[2][0]);
             // console.log(response[3][0]);
-            $(".test").on("click", function (event) {
+            $("#remove").on("click", function (event) {
                 $(".test").fadeOut(1000);
             })
+        
         })
     }
 
