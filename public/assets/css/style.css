@@ -138,7 +138,7 @@ p, h1, h4{
 #test {
     overflow: auto; 
     text-align: center;
-    -webkit-overflow-scrolling: touch;
+    /* -webkit-overflow-scrolling: touch; */
 }
 
 #resume-pic {
