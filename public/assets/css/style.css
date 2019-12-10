@@ -236,6 +236,7 @@ i {
 #remove {
     color: white;
     background-color: red;
+    border-radius: 4px;
     font-size: 20px;
     transform: scale(1, .5);
     position: absolute;
