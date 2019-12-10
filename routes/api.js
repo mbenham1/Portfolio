@@ -2,7 +2,7 @@ var db = require("../models");
 var checkWord = require('check-word');
 words = checkWord('en');
 
-module.exports = function(app) {
+module.exports = function (app) {
 
   var palindromes = [
     // {
@@ -12,15 +12,15 @@ module.exports = function(app) {
   var sorted = [];
   var top = [];
 
-  app.get("/api/friends", function(req, res) {
-      
-    db.User.findAll({}).then(function(list) {
+  app.get("/api/friends", function (req, res) {
+
+    db.User.findAll({}).then(function (list) {
       res.json(list);
     });
 
   });
 
-  app.get("/api/palindromes", function(req, res) {
+  app.get("/api/palindromes", function (req, res) {
 
     res.json(palindromes);
 
@@ -28,20 +28,21 @@ module.exports = function(app) {
 
   app.get("/api/top", function (req, res) {
 
-    res.json(top[top.length-1]);
+    res.json(top[top.length - 1]);
     // res.json(top);
 
   })
 
-  app.post("/api/friends", function(req, res) {
+  app.post("/api/friends", function (req, res) {
 
-    db.User.create(req.body).then(function(newFriend) {
+    db.User.create(req.body).then(function (newFriend) {
+      // console.log(req.body);
       res.json(newFriend);
     });
 
   });
 
-  app.post("/api/palindromes", function(req, res) {
+  app.post("/api/palindromes", function (req, res) {
 
     // console.log(words.check(req.body.palindrome));
     palindromes.push(req.body);
@@ -51,14 +52,14 @@ module.exports = function(app) {
     let unique = [...new Set(sorted[0].slice(''))];
     if (unique.length > 3) {
       var longest = sorted[0];
-      var index = palindromes.map(function(i) { return i.palindrome; }).indexOf(longest);
+      var index = palindromes.map(function (i) { return i.palindrome; }).indexOf(longest);
       // console.log(index);
       if (longest.split(" ").length > 2) {
-      top.push({
-        palindrome: longest,
-        date: palindromes[index].date
-      });
-    }
+        top.push({
+          palindrome: longest,
+          date: palindromes[index].date
+        });
+      }
       // res.send(longest);
       // console.log(top)
     } else {
@@ -67,7 +68,7 @@ module.exports = function(app) {
 
   })
 
-  app.get("/api/c1eara11", function(req, res) {
+  app.get("/api/c1eara11", function (req, res) {
 
     palindromes = [{}];
     top = [];
