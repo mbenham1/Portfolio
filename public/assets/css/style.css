@@ -4,7 +4,7 @@
     transition: .1s ease;
 }
 
-.bar {
+/* .bar {
     -webkit-transform-origin: 0 100%;
     -webkit-transform: rotate(90deg);
     -moz-transform-origin: 0 100%;
@@ -17,7 +17,7 @@
     width: 86vh;
     z-index: 99;
     padding-bottom: 10px;
-}
+} */
 
 h4 {
     color: lightgray;
