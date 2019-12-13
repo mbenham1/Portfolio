@@ -4,6 +4,21 @@
     transition: .1s ease;
 }
 
+.bar {
+    -webkit-transform-origin: 0 100%;
+    -webkit-transform: rotate(90deg);
+    -moz-transform-origin: 0 100%;
+    -moz-transform: rotate(90deg);
+    -ms-transform-origin: 0 100%;
+    -ms-transform: rotate(90deg);
+    transform-origin: 0 100%;
+    transform: rotate(90deg);
+    position: fixed;
+    width: 86vh;
+    z-index: 99;
+    padding-bottom: 10px;
+}
+
 h4 {
     color: lightgray;
 }

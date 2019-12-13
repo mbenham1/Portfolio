@@ -59,6 +59,17 @@ $(document).ready(function () {
         $(".wrapper .wrapper-1").height(windowHeight);
     });
 
+    $(window).scroll(function () {
+        var s = $(window).scrollTop(),
+              d = $(document).height(),
+              c = $(window).height();
+              scrollPercent = (s / (d-c)) * 100;
+              var position = scrollPercent;
+      
+         $(".bar").attr('value', position);
+      
+      });
+
     $(".test").hide();
     var name = $("#name");
     var email = $("#email");
