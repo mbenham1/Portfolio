@@ -145,8 +145,8 @@ $(document).ready(function () {
         var original = string.toLowerCase().replace(/\s/g, '');
         var reverse = original.split('').reverse().join('');
         if (reverse === original) {
-            $("#confirm").text("YES, " + string + " is a palindrome!").css({ color: "green" });
 
+            $("#confirm").text("YES, " + string + " is a palindrome!").css({ color: "green" });
             var newPalindrome = {
                 palindrome: string,
                 date: date
@@ -170,7 +170,7 @@ $(document).ready(function () {
             $("#confirm").text("NOPE, " + original + " is not a palindrome!").css({ color: "red" });
             $("#bad-palindrome").text(" ");
         }
-
+        setTimeout(function(){ $("#confirm").text(" ") }, 3000);
     };
 
     // function newestPalindrome() {
