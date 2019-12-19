@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    var count;
 
     let windowHeight = $(window).height();
     if(windowHeight < 650) { windowHeight = 650; }
@@ -140,12 +141,17 @@ $(document).ready(function () {
 
     function palindrome(string) {
 
+        clearInterval(count);
+        count = setInterval(function(){
+            $("#confirm").text(" ");
+            $("#bad-palindrome").text(" ");
+        }, 3000)
+
         var date = new Date();
         date = moment(date).format("MMMM Do YYYY, h:mm:ss a");
         var original = string.toLowerCase().replace(/\s/g, '');
         var reverse = original.split('').reverse().join('');
         if (reverse === original) {
-
             $("#confirm").text("YES, " + string + " is a palindrome!").css({ color: "green" });
             var newPalindrome = {
                 palindrome: string,
@@ -162,15 +168,15 @@ $(document).ready(function () {
             }
 
             $.post("/api/palindromes", newPalindrome, function (data) {
-                console.log("Sent");
+                // console.log("Sent");
             })
 
             getPalindromes();
         } else {
-            $("#confirm").text("NOPE, " + original + " is not a palindrome!").css({ color: "red" });
+            $("#confirm").text("NOPE, " + string + " is not a palindrome!").css({ color: "red" });
             $("#bad-palindrome").text(" ");
         }
-        setTimeout(function(){ $("#confirm").text(" ") }, 3000);
+
     };
 
     // function newestPalindrome() {
