@@ -129,11 +129,14 @@ $(document).ready(function () {
         if (!input.replace(/\s/g, '').length) {
             $("#confirm").text('Entry only contains whitespace').css({ color: "black" });
             $("#bad-palindrome").text("");
+            clearInterval(count);
             return
         }
         if (!input || regEx.test(input)) {
             $("#confirm").text("Invalid entry").css({ color: "red" });
             $("#bad-palindrome").text(" ");
+            clearInterval(count);
+            return 
         } else {
             palindrome(input);
         }
