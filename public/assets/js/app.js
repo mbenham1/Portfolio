@@ -228,10 +228,10 @@ $(document).ready(function () {
             const responseLink = response[3][0];
             $("#link").attr("href", responseLink);
             $("#wiki-name").text(responseTitle);
-            // $("#wiki-text").text(responseText);
+            $("#wiki-text").text(responseText);
             $("#wiki-link").text(responseLink);
             // console.log(response[1][0]);
-            // console.log(response[2][0]);
+            console.log(response[2][0]);
             // console.log(response[3][0]);
             $("#remove").on("click", function (event) {
                 $(".test").fadeOut(1000);
