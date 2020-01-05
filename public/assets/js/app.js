@@ -104,7 +104,7 @@ $(document).ready(function () {
     })
 
     function sendMail(sub) {
-        console.log(sub);
+        // console.log(sub);
         window.open(`mailto:michaelbenham89@gmail.com?subject=Hello, Michael!&body=Nice site!%0D%0A%0D%0A${sub.name}`);
     }
 
@@ -231,7 +231,7 @@ $(document).ready(function () {
             $("#wiki-text").text(responseText);
             $("#wiki-link").text(responseLink);
             // console.log(response[1][0]);
-            console.log(response[2][0]);
+            // console.log(response[2][0]);
             // console.log(response[3][0]);
             $("#remove").on("click", function (event) {
                 $(".test").fadeOut(1000);
