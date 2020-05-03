@@ -1,4 +1,36 @@
 $(document).ready(function () {
+
+    // let portfolio = [
+    //     {
+    //         title: "React Clicky Game",
+    //         image: "./assets/img/images/clicky-game.png",
+    //         link: "https://mbenham1.github.io/React-Clicky-Game/",
+    //         github: "https://github.com/mbenham1/React-Clicky-Game"
+    //     },
+    //     {
+    //         title: "Cheeriongoose",
+    //         image: "./assets/img/images/cheeriongoose.png",
+    //         link: "http://radiant-castle-95960.herokuapp.com/",
+    //         github: "https://github.com/mbenham1/Cheeriongoose"
+    //     }
+    // ]
+
+    // portfolio.forEach(function(item){
+
+    //     $(".portfolio-items").prepend(`
+    //     <li>
+    //         <a href="${item.link}" target="_blank">
+    //                 <span class="cover" style="background: url(${item.image}) center; background-size: cover;">
+    //                      <img style="height: 200px; width: 200px" src="${item.image}" alt="${item.title}">
+    //                 </span>
+    //         </a>
+    //         <h4 id="heading">${item.title}</h2>
+    //         <a style="color: white" class="view-in-github" href="${item.github}" target="_blank"><ins class="fab fa-github"></ins> view in github</a>
+    //     </li>
+    // `);
+
+    // })
+
     var count;
 
     let windowHeight = $(window).height();
