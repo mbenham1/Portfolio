@@ -151,9 +151,9 @@ p, h1, h4{
 }
 
 #test {
-    overflow: auto; 
+    /* overflow: auto;  */
     text-align: center;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     /* -webkit-overflow-scrolling: touch; */
 }
 
