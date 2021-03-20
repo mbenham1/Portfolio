@@ -49,6 +49,14 @@ $(document).ready(function () {
         loop: true
     });
 
+    new Typed('.technologies', {
+        strings: ["HTML^1200", "CSS^1200", "Bootstrap^1200", "Javascript^1200", "jQuery^1200", "Node^1200", "Express^1200", "MySQL^1200", "Sequelize^1200", "MongoDB^1200", "Mongoose^1200", "Heroku^1200", "React^1200", "AWS Amplify^1200"],
+        typeSpeed: 50,
+        backSpeed: 0,
+        cursorChar: '|',
+        loop: true
+    });
+
     $('.nav-link').on("click", function () {
         $('.nav-link').removeClass('active');
         $(this).addClass('active');
