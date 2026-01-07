@@ -1,6 +1,6 @@
 'use strict';
 
-const uuidv4 = require('uuid/v4');
+const uuidv4 = require('uuid').v4;
 
 const TransactionQueries = {
   /**
@@ -16,7 +16,7 @@ const TransactionQueries = {
       return;
     }
 
-    return `SET SESSION TRANSACTION ISOLATION LEVEL ${value};`;
+    return `SET TRANSACTION ISOLATION LEVEL ${value};`;
   },
 
   generateTransactionId() {
